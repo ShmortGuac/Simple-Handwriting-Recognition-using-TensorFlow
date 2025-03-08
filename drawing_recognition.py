@@ -51,7 +51,6 @@ def add_with_limit(a, b):
     return min(a+b, 255)
 
 
-# Create Tkinter window
 root = tk.Tk()
 root.title("28x28 Drawing Pad")
 
@@ -59,7 +58,6 @@ canvas = tk.Canvas(root, width=canvas_size, height=canvas_size, bg="white")
 canvas.pack()
 canvas.bind("<B1-Motion>", draw)
 
-# Buttons
 btn_frame = tk.Frame(root)
 btn_frame.pack()
 
@@ -70,6 +68,6 @@ predict_btn = tk.Button(btn_frame, text="Predict", command=predict_number)
 predict_btn.pack(side=tk.LEFT)
 
 label = tk.Label(root, text="", font=("Arial", 16))
-label.pack(pady=10)  # Add padding
+label.pack(pady=10) 
 
 root.mainloop()
